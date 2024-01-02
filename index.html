@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#d4ebfd]">
+    <header>
+        <!-- Top Header -->
+        <div class="flex flex-col items-center gap-2 p-5 bg-orange-500 sm:flex-row sm:justify-between">
+            <div class="text-xs sm:text-lg">
+                <p class="p-4">Nepali Date / English Date</p>
+            </div>
+
+            <div class="text-xs sm:text-lg">
+                <a href="mailto:purbanchalcivillab@gmail.com" class="p-4 flex gap-2 text-sm items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="rospanund" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>                      
+                    <h5 class="hover:text-zinc-200">Send Email</h5>
+                </a>
+            </div>
+        </div>
+        <!-- Top Header End -->
+
+        <!-- Bottom Header -->
+        <div class="flex flex-col items-center bg-[#122231] gap-3 p-5 sm:flex-row sm:justify-between">
+            <div class="p-4">
+                <img src="img/logo.jpg" class="w-80 sm:w-72 rounded" alt="logo of the company">
+            </div>
+            <div class="search max-w-80 p-4">
+                <form action="/" method="post">
+                    <input type="search" name="searchword" placeholder="Search..."
+                        class="relative m-0 block w-full flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-slate-300 outline-none transition duration-200 ease-in-out">
+                    <br>
+                    <button type="submit"
+                        class="inline-block bg-zinc-400 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal shadow-[0_4px_9px_-4px_#3b71ca] rounded hover:bg-zinc-600 hover:text-neutral-200 transition duration-200 w-full">Search</button>
+                </form>
+            </div>
+        </div>
+        <!-- Bottom Header End -->
+    </header>
+
+    <!-- Navbar -->
+    <nav class="p-4 bg-orange-500 w-[95%] mx-auto" x-data="{ open: false }">
+        <ul class="flex flex-col flex-wrap text-sm items-center md:flex-row md:justify-center md:gap-3 lg:gap-5 uppercase">
+            <!-- Hamburger -->
+            <div class="flex items-center w-full md:hidden">
+                <button id="hamburger-btn" class="ext-gray-800 w-12 h-12 relative focus:outline-none" @click="open = !open">
+                    <span class="sr-only">Open main menu</span>
+                    <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+                        <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out" :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out" :class="{'opacity-0': open } "></span>
+                        <span aria-hidden="true" class="block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+                    </div>
+                </button>
+            </div>
+            <!-- Hamburger end -->
+
+            <div id="menu" class="hidden md:flex md:gap-3 md:flex-wrap">
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">about us</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">notice</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">news</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">group companies</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">investor relations</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">projects</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">disclosure</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">career</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">contact us</a></li>
+            </div>
+        </ul>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Main Content -->
+    <main class="h-full">
+        <div class="p-8 flex items-center justify-center bg-green-400 h-72">
+            slider goes here
+        </div>
+
+        <div class="flex flex-col gap-2 md:flex-row">
+            <div class="px-10 py-3 md:w-[60%]">
+                <h2 class="text-2xl sm:text-3xl text-orange-500">Welcome to Purbanchal Civil Labs</h2>
+
+                <p class="my-4 text-slate-700 tracking-wide text-sm text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum autem, obcaecati modi earum exercitationem molestias illo molestiae quo amet dolore, possimus impedit corporis iste incidunt beatae repellendus, accusamus quasi. Odit esse consequatur repellat! Blanditiis itaque expedita quia temporibus animi sunt tempore.</p>
+
+                <p class="my-4 text-slate-700 tracking-wide text-sm text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi nostrum autem, obcaecati modi earum exercitationem molestias illo molestiae quo amet dolore, possimus impedit corporis iste incidunt beatae repellendus, accusamus quasi. Odit esse consequatur repellat! Blanditiis itaque expedita quia temporibus animi sunt tempore.</p>
+
+                <p class="my-4 text-slate-700 tracking-wide text-sm text-justify leading-relaxed">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates officiis laboriosam, tempora quae distinctio quia illum culpa eos voluptas odit unde omnis labore quaerat temporibus vero suscipit at in expedita.
+                </p>
+
+                <p class="my-4 text-slate-700 tracking-wide text-sm text-justify leading-relaxed">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates officiis laboriosam, tempora quae distinctio quia illum culpa eos voluptas 
+                </p>
+            </div>
+
+            <div class="px-10 py-3 md:w-[40%]">
+                <h3 class="text-lg text-slate-500 mb-3">What's New?</h3>
+                <div class="space-y-4">
+                    <div class="p-2 rounded border bg-white text-sm">
+                        <a href="" class="flex gap-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd" />
+                                <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z" />
+                            </svg>
+                            <h5>First Accordion</h5>
+                        </a>
+                    </div>
+                    <div class="p-2 rounded border bg-white text-sm">
+                        <a href="" class="flex gap-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd" />
+                                <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z" />
+                            </svg>
+                            <h5>Second Accordion</h5>
+                        </a>
+                    </div>
+                    <div class="p-2 rounded border bg-white text-sm">
+                        <a href="" class="flex gap-3 items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                <path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd" />
+                                <path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z" />
+                            </svg>  
+                            <h5>Third Accordion</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white py-8">
+            <div class="px-10 py-3 flex flex-col md:flex-row gap-3">
+                <div class="border p-4 rounded space-y-3 md:w-[25%]">
+                    <h2 class="text-2xl text-orange-500">Heading</h2>
+                    <a href="" class="inline-block">
+                        <h4>Some Content Information.</h4>
+                    </a>
+                    <hr>
+                    <a href="" class="inline-block">
+                        <h4>Other Content Information.</h4>
+                    </a>
+                    <hr>
+                    <a href="" class="inline-block bg-slate-500 px-3 py-1.5 rounded text-sm hover:bg-slate-800 hover:text-teal-300 transition">
+                        <p>Read More &rarr;</p>
+                    </a>
+                </div>
+                <div class="border flex flex-col justify-between p-4 rounded space-y-2 md:w-[25%]">
+                    <div><img src="img/skeleton.gif" alt="image 1"></div>
+                    <h4 class="text-lg text-orange-500">Image Title 1</h4>
+                </div>
+                <div class="border flex flex-col justify-between p-4 rounded space-y-2 md:w-[25%]">
+                    <div><img src="img/skeleton.gif" alt="image 1"></div>
+                    <h4 class="text-lg text-orange-500">Image Title 2</h4>
+                </div>
+                <div class="border flex flex-col justify-between p-4 rounded space-y-2 md:w-[25%]">
+                    <div><img src="img/skeleton.gif" alt="image 1"></div>
+                    <h4 class="text-lg text-orange-500">Image Title 3</h4>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228356.94254315438!2d86.71681388671875!3d26.581896999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef1b2320eceb9f%3A0xa81911b7a2808477!2sPurvanchal%20Civil%20Engineering%20Lab!5e0!3m2!1sen!2snp!4v1704216563198!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Footer -->
+    <footer>
+        <div
+            class="flex flex-col gap-3 items-center justify-center text-xs sm:text-sm sm:justify-between sm:flex-row md:text-lg sm:items-center bg-orange-500 p-4 h-24">
+            <p>Copyrights &copy; 2024 Purbanchal Civil Labs. All rights Reserved.</p>
+            <p>Github: adars124</p>
+        </div>
+    </footer>
+    <!-- Footer End-->
+</body>
+
+<script src="scripts/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</html>
