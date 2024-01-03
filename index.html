@@ -10,6 +10,7 @@
 </head>
 
 <body class="bg-[#d4ebfd]">
+    <!-- Header -->
     <header>
         <!-- Top Header -->
         <div class="flex flex-col items-center gap-2 p-5 bg-orange-500 sm:flex-row sm:justify-between">
@@ -31,7 +32,7 @@
         <!-- Bottom Header -->
         <div class="flex flex-col items-center bg-[#122231] gap-3 p-5 sm:flex-row sm:justify-between">
             <div class="p-4">
-                <img src="img/logo.jpg" class="w-80 sm:w-72 rounded" alt="logo of the company">
+                <img src="img/logo.jpg" class="w-52 sm:w-72 rounded" alt="logo of the company">
             </div>
             <div class="search max-w-80 p-4">
                 <form action="/" method="post">
@@ -45,6 +46,7 @@
         </div>
         <!-- Bottom Header End -->
     </header>
+    <!-- Header End -->
 
     <!-- Navbar -->
     <nav class="p-4 bg-orange-500 w-[95%] mx-auto" x-data="{ open: false }">
@@ -63,7 +65,7 @@
             <!-- Hamburger end -->
 
             <div id="menu" class="hidden md:flex md:gap-3 md:flex-wrap">
-                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">about us</a></li>
+                <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="about.html">about us</a></li>
                 <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">notice</a></li>
                 <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">news</a></li>
                 <li class="hover:bg-slate-800 hover:text-slate-200 cursor-pointer text-center p-2 rounded"><a href="#">group companies</a></li>
@@ -79,10 +81,55 @@
 
     <!-- Main Content -->
     <main class="h-full">
-        <div class="p-8 flex items-center justify-center bg-green-400 h-72">
-            slider goes here
-        </div>
+        <!-- Carousel -->
+        <div class="max-w-4xl mx-auto">
+            <div id="default-carousel" class="relative py-2" data-carousel="static">
+                <div class="overflow-hidden relative rounded h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="img/carousel-1.svg" alt="carousel image" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" >
+                    </div>
+                    <!-- Item 1 End -->
 
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="img/carousel-2.svg" alt="carousel image" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" >
+                    </div>
+                    <!-- Item 2 End -->
+
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="img/carousel-3.svg" alt="carousel image" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" >
+                    </div>
+                    <!-- Item 3 End -->
+
+                    <!-- Previous Button -->
+                    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <!-- Previous Button End -->
+
+                    <!-- Next Button -->
+                    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                    <!-- Next Button End -->
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- Mid Section -->
         <div class="flex flex-col gap-2 md:flex-row">
             <div class="px-10 py-3 md:w-[60%]">
                 <h2 class="text-2xl sm:text-3xl text-orange-500">Welcome to Purbanchal Civil Labs</h2>
@@ -100,6 +147,7 @@
                 </p>
             </div>
 
+            <!-- Accordions -->
             <div class="px-10 py-3 md:w-[40%]">
                 <h3 class="text-lg text-slate-500 mb-3">What's New?</h3>
                 <div class="space-y-4">
@@ -132,8 +180,11 @@
                     </div>
                 </div>
             </div>
+            <!-- Accordions End -->
         </div>
+        <!-- Mid Section End -->
 
+        <!-- Cards -->
         <div class="bg-white py-8">
             <div class="px-10 py-3 flex flex-col md:flex-row gap-3">
                 <div class="border p-4 rounded space-y-3 md:w-[25%]">
@@ -164,10 +215,13 @@
                 </div>
             </div>
         </div>
+        <!-- Cards End -->
 
+        <!-- Map -->
         <div>
             <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228356.94254315438!2d86.71681388671875!3d26.581896999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef1b2320eceb9f%3A0xa81911b7a2808477!2sPurvanchal%20Civil%20Engineering%20Lab!5e0!3m2!1sen!2snp!4v1704216563198!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <!-- Map End -->
     </main>
     <!-- Main Content End -->
 
@@ -183,5 +237,6 @@
 </body>
 
 <script src="scripts/script.js"></script>
+<script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </html>
